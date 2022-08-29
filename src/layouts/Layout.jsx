@@ -4,7 +4,7 @@ import { ReactBodyLayout } from "./ReactBodyLayout";
 export function Layout(props) {
   const [value, setValue] = useState(2);
   useEffect(() => {
-    console.log("props: ", props);
+    // console.log("props: ", props);
   }, []);
 
   return (
@@ -16,7 +16,6 @@ export function Layout(props) {
         <link rel="icon" type="image/x-icon" href="/favicon.ico" />
       </head>
       <body className="pt-36">
-        <h1>from local</h1>
         <ReactBodyLayout props={props} />
       </body>
     </html>

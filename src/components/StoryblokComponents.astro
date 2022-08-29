@@ -10,7 +10,7 @@ const { story } = Astro.props;
 
 {
   story.content.body?.map((blok) => {
-    console.log("story: ", story);
+    // console.log("story: ", story);
     switch (blok.component) {
       case "teaser":
         return <TeaserReact client:load blok={blok} />;

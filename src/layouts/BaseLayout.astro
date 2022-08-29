@@ -11,10 +11,13 @@ const { story } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <title>{story.name}</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://gostudent.org/static/stylesheets/dist/master.css"
+    />
   </head>
   <body class="pt-36">
     <Header />
-
     <Page story={story} />
   </body>
 </html>

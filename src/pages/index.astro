@@ -1,8 +1,9 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { Layout } from "../layouts/Layout";
 import { getStory } from "../utils/storyblok.js";
 
 const story = await getStory("home");
 ---
 
-<BaseLayout story={story} />
+<Layout story={story} />

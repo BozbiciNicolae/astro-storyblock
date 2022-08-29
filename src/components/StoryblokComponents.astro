@@ -2,19 +2,22 @@
 import Feature from "../components/Feature.astro";
 import Grid from "../components/Grid.astro";
 import Teaser from "../components/Teaser.astro";
-
+import { FeatureReact } from "./FeatureReact.jsx";
+import { GridReact } from "./GridReact.jsx";
+import { TeaserReact } from "./TeaserReact.jsx";
 const { story } = Astro.props;
 ---
 
 {
   story.content.body?.map((blok) => {
+    console.log("story: ", story);
     switch (blok.component) {
       case "teaser":
-        return <Teaser blok={blok} />;
+        return <TeaserReact client:load blok={blok} />;
       case "feature":
-        return <Feature blok={blok} />;
+        return <FeatureReact client:load blok={blok} />;
       case "grid":
-        return <Grid blok={blok} />;
+        return <GridReact client:load blok={blok} />;
     }
   })
 }

@@ -17,7 +17,7 @@ export function Layout(props) {
       </head>
       <body className="pt-36">
         <h1>from local</h1>
-        <ReactBodyLayout client:load props={props} />
+        <ReactBodyLayout props={props} />
       </body>
     </html>
   );

@@ -1,5 +1,4 @@
 ---
-import Header from "../components/Header.astro";
 import Navbar from "../components/Navbar.astro";
 import Page from "../components/Page.astro";
 import { ReactDemo } from "../components/ReactDemo";
@@ -19,7 +18,6 @@ const { story } = Astro.props;
   </head>
   <body class="pt-36">
     <Navbar />
-    <Header />
     <Page story={story} />
   </body>
 </html>

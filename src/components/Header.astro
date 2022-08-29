@@ -1,3 +1,8 @@
+---
+const { blok } = Astro.props;
+---
+
+
 <section
   id="home-header"
   class="position-relative bg-gray header-new ab-visible"
@@ -6,7 +11,7 @@
     <div class="row align-items-center">
       <div class="col-md">
         <h1 class="mb-20 text-center max-width-400 text-md-left line-height-sm">
-          The tutoring revolution
+          {blok.Title}
         </h1>
         <div class="container text-left mb-20">
           <div class="column" style="color: #131E29">

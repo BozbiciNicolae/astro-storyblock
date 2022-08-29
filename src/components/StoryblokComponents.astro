@@ -6,6 +6,7 @@ import Teaser from "../components/Teaser.astro";
 import { FeatureReact } from "./FeatureReact.jsx";
 import { GridReact } from "./GridReact.jsx";
 import { TeaserReact } from "./TeaserReact.jsx";
+import Header from "./Header.astro";
 
 const { story } = Astro.props;
 ---
@@ -22,6 +23,8 @@ const { story } = Astro.props;
         return <GridReact client:load blok={blok} />;
       case "HomepageSection":
         return <HomepageSection client:load blok={blok} />;
+      case "Header":
+        return <Header /* client:load */ blok={blok} />;
     }
   })
 }

@@ -22,9 +22,9 @@ const { story } = Astro.props;
       case "grid":
         return <GridReact client:load blok={blok} />;
       case "HomepageSection":
-        return <HomepageSection client:load blok={blok} />;
+        return <HomepageSection blok={blok} />;
       case "Header":
-        return <Header /* client:load */ blok={blok} />;
+        return <Header blok={blok} />;
     }
   })
 }

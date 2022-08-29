@@ -1,16 +1,18 @@
 ---
 import Feature from "../components/Feature.astro";
 import Grid from "../components/Grid.astro";
+import HomepageSection from "../components/HomepageSection.astro";
 import Teaser from "../components/Teaser.astro";
 import { FeatureReact } from "./FeatureReact.jsx";
 import { GridReact } from "./GridReact.jsx";
 import { TeaserReact } from "./TeaserReact.jsx";
+
 const { story } = Astro.props;
 ---
 
 {
   story.content.body?.map((blok) => {
-    // console.log("story: ", story);
+    console.log("blok: ", blok.component);
     switch (blok.component) {
       case "teaser":
         return <TeaserReact client:load blok={blok} />;
@@ -18,6 +20,8 @@ const { story } = Astro.props;
         return <FeatureReact client:load blok={blok} />;
       case "grid":
         return <GridReact client:load blok={blok} />;
+      case "HomepageSection":
+        return <HomepageSection client:load blok={blok} />;
     }
   })
 }

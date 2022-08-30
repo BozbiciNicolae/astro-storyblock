@@ -20,7 +20,7 @@ const { blok } = Astro.props;
                 <i class="fas fa-check text-gs-primary" aria-hidden="true"></i>
               </h3>
               <p class="md ml-12 font-weight-semibold">
-                Private one-to-one 50 minute classes
+                Affordable 50-minute online lessons
               </p>
             </div>
             <div class="row flex-nowrap">
@@ -44,7 +44,7 @@ const { blok } = Astro.props;
                 <i class="fas fa-check text-gs-primary" aria-hidden="true"></i>
               </h3>
               <p class="md ml-12 font-weight-semibold">
-                Certified tutors in 30+ subjects
+                All UK tutors have an enhanced DBS check
               </p>
             </div>
           </div>
@@ -53,13 +53,14 @@ const { blok } = Astro.props;
           class="btn btn-primary max-width-300 mx-auto mx-md-0 text-white top-free-trial-btn"
           href="/us/find-tutors"
         >
-          Test now for free
+          GET A FREE TRIAL SESSION
         </a>
         <div class="d-flex justify-content-center justify-content-md-start">
           <div
             class="w-auto d-flex align-items-center mt-3 mb-4 mb-lg-0"
             style="height: 150px"
           >
+          <img src={blok.Trustpilot}>
             <div
               class="trustpilot-widget"
               data-locale="en-US"
@@ -80,7 +81,8 @@ const { blok } = Astro.props;
           </div>
         </div>
       </div>
-      <div class="col-md justify-content-center justify-content-lg-end">
+
+      <!-- <div class="col-md justify-content-center justify-content-lg-end">
         <img
           src="https://www.gostudent.org/static/images/reviews/TVC_HP_Header_HP_en-US.png"
           alt="hero"
@@ -88,7 +90,18 @@ const { blok } = Astro.props;
           width="100%"
           height="auto"
         />
+      </div> -->
+
+      <div class="col-md justify-content-center justify-content-lg-end">
+        <img 
+        src={blok.Hero} 
+        alt="hero" 
+        class="d-block col-12" 
+        width="100%" 
+        height="auto">
       </div>
+
+
     </div>
   </div>
 </section>

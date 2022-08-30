@@ -2,6 +2,7 @@
 const { blok } = Astro.props;
 ---
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css" />
 
 <section
   id="home-header"
@@ -13,11 +14,11 @@ const { blok } = Astro.props;
         <h1 class="mb-20 text-center max-width-400 text-md-left line-height-sm">
           {blok.Title}
         </h1>
-        
         <div class="container text-left mb-20">
           <div class="column" style="color: #131E29">
             <div class="row flex-nowrap">
               <h3 class="sm">
+                <i class="fas fa-check text-gs-primary" aria-hidden="true"></i>
               </h3>
               <p class="md ml-12 font-weight-semibold">
                 Affordable 50-minute online lessons
@@ -49,6 +50,8 @@ const { blok } = Astro.props;
             </div>
           </div>
         </div>
+   
+
         <a
           class="btn btn-primary max-width-300 mx-auto mx-md-0 text-white top-free-trial-btn"
           href="/us/find-tutors"

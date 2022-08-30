@@ -1,5 +1,5 @@
 ---
-import { getLinks, getStory } from "../../utils/storyblok.js";
+import { getLinks, getStory } from "../utils/storyblok.js";
 import BaseLayout from "../layouts/BaseLayout.astro";
 
 export async function getStaticPaths() {
@@ -13,7 +13,7 @@ export async function getStaticPaths() {
   });
 }
 
-const { slug } = Astro.request.params;
+const { slug } = Astro.params;
 
 const story = await getStory(slug);
 ---

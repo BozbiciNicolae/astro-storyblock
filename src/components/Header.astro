@@ -13,11 +13,11 @@ const { blok } = Astro.props;
         <h1 class="mb-20 text-center max-width-400 text-md-left line-height-sm">
           {blok.Title}
         </h1>
+        
         <div class="container text-left mb-20">
           <div class="column" style="color: #131E29">
             <div class="row flex-nowrap">
               <h3 class="sm">
-                <i class="fas fa-check text-gs-primary" aria-hidden="true"></i>
               </h3>
               <p class="md ml-12 font-weight-semibold">
                 Affordable 50-minute online lessons
@@ -56,11 +56,20 @@ const { blok } = Astro.props;
           GET A FREE TRIAL SESSION
         </a>
         <div class="d-flex justify-content-center justify-content-md-start">
+          
           <div
             class="w-auto d-flex align-items-center mt-3 mb-4 mb-lg-0"
             style="height: 150px"
           >
-          <img src={blok.Trustpilot}>
+          <div class="p-3">
+            <!-- Rated Logo -->
+            <img src={blok.Trustpilot} class="pb-4">
+            
+            <!-- TrustBox script -->
+            <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+            <!-- End TrustBox script -->
+          </div>
+
             <div
               class="trustpilot-widget"
               data-locale="en-US"
@@ -82,16 +91,7 @@ const { blok } = Astro.props;
         </div>
       </div>
 
-      <!-- <div class="col-md justify-content-center justify-content-lg-end">
-        <img
-          src="https://www.gostudent.org/static/images/reviews/TVC_HP_Header_HP_en-US.png"
-          alt="hero"
-          class="d-block col-12"
-          width="100%"
-          height="auto"
-        />
-      </div> -->
-
+      
       <div class="col-md justify-content-center justify-content-lg-end">
         <img 
         src={blok.Hero} 

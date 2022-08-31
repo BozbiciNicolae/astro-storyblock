@@ -7,6 +7,7 @@ import { FeatureReact } from "./FeatureReact.jsx";
 import { GridReact } from "./GridReact.jsx";
 import { TeaserReact } from "./TeaserReact.jsx";
 import Header from "./Header.astro";
+import EducationReport from "./EducationReport.astro";
 
 const { story } = Astro.props;
 ---
@@ -25,6 +26,8 @@ const { story } = Astro.props;
         return <HomepageSection blok={blok} />;
       case "Header":
         return <Header blok={blok} />;
+      case "EducationReport":
+        return <EducationReport blok={blok} />;
     }
   })
 }

@@ -1,0 +1,20 @@
+---
+const { blok } = Astro.props;
+---
+
+<section class="bg-primary-darker bg-image no-padding-bottom no-padding-top header-half-image-left header-section header-section-top bg-gray d-flex align-items-center overflow-hidden-x">
+  <img src={blok.Image} alt="" class="d-none d-lg-block header-image r-0">
+  <div class="container">
+    <div class="row">
+      <img src={blok.ImageMobile} alt="" class="d-lg-none d-md-block full-width r-0 pb-20">
+    </div>
+    <div class="offset-lg-6 pb-20 mb-20">
+      <h3 class="uppercase font-weight-bold pt-20 mt-20">{blok.Header}</h3>
+      <h2 class="xxl h1 font-weight-extrabold">{blok.Title}</h2>
+      <p class="xxl line-height-1-8">{blok.Description}</p>
+      <a href={blok.CtaLink} class="btn btn-lg btn-primary mx-auto mx-md-0 text-white">
+        {blok.CtaText}
+      </a>
+    </div>
+  </div>
+</section>

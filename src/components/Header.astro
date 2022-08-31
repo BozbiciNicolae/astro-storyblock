@@ -16,47 +16,25 @@ const { blok } = Astro.props;
         </h1>
         <div class="container text-left mb-20">
           <div class="column" style="color: #131E29">
-            <div class="row flex-nowrap">
-              <h3 class="sm">
-                <i class="fas fa-check text-gs-primary" aria-hidden="true"></i>
-              </h3>
-              <p class="md ml-12 font-weight-semibold">
-                Affordable 50-minute online lessons
-              </p>
+            {blok.TopicsList.map((topic) => (
+              <div class="row flex-nowrap">
+                <h3 class="sm">
+                  <i class="fas fa-check text-gs-primary" aria-hidden="true"></i>
+                </h3>
+                <p class="md ml-12 font-weight-semibold">
+                  {topic.Label}
+                </p>
             </div>
-            <div class="row flex-nowrap">
-              <h3 class="sm">
-                <i class="fas fa-check text-gs-primary" aria-hidden="true"></i>
-              </h3>
-              <p class="md ml-12 font-weight-semibold">
-                We match our tutors to your child's needs
-              </p>
-            </div>
-            <div class="row flex-nowrap">
-              <h3 class="sm">
-                <i class="fas fa-check text-gs-primary" aria-hidden="true"></i>
-              </h3>
-              <p class="md ml-12 font-weight-semibold">
-                All school subjects and age groups
-              </p>
-            </div>
-            <div class="row flex-nowrap">
-              <h3 class="sm">
-                <i class="fas fa-check text-gs-primary" aria-hidden="true"></i>
-              </h3>
-              <p class="md ml-12 font-weight-semibold">
-                All UK tutors have an enhanced DBS check
-              </p>
-            </div>
+            ))}
           </div>
         </div>
    
 
         <a
           class="btn btn-primary max-width-300 mx-auto mx-md-0 text-white top-free-trial-btn"
-          href="/us/find-tutors"
+          href={blok.CtaLink}
         >
-          GET A FREE TRIAL SESSION
+          {blok.CtaText}
         </a>
         <div class="d-flex justify-content-center justify-content-md-start">
           

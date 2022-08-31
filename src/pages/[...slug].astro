@@ -13,7 +13,7 @@ export async function getStaticPaths() {
   });
 }
 
-const { slug } = Astro.request.params;
+const { slug } = Astro.params;
 
 const story = await getStory(slug);
 ---

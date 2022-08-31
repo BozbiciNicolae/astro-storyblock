@@ -2,6 +2,7 @@
 import Navbar from "../components/Navbar.astro";
 import Page from "../components/Page.astro";
 import { ReactDemo } from "../components/ReactDemo";
+import Footer from "../components/static/Footer.astro";
 const { story } = Astro.props;
 ---
 
@@ -19,5 +20,6 @@ const { story } = Astro.props;
   <body class="pt-36">
     <Navbar />
     <Page story={story} />
+    <Footer />
   </body>
 </html>

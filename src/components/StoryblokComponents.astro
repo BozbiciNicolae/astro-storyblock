@@ -3,11 +3,12 @@ import Feature from "../components/Feature.astro";
 import Grid from "../components/Grid.astro";
 import HomepageSection from "../components/HomepageSection.astro";
 import Teaser from "../components/Teaser.astro";
+import EducationReport from "./EducationReport.astro";
+import FeatureList from "./FeatureList.astro";
 import { FeatureReact } from "./FeatureReact.jsx";
 import { GridReact } from "./GridReact.jsx";
-import { TeaserReact } from "./TeaserReact.jsx";
 import Header from "./Header.astro";
-import EducationReport from "./EducationReport.astro";
+import { TeaserReact } from "./TeaserReact.jsx";
 
 const { story } = Astro.props;
 ---
@@ -28,6 +29,8 @@ const { story } = Astro.props;
         return <Header blok={blok} />;
       case "EducationReport":
         return <EducationReport blok={blok} />;
+      case "FeatureList":
+        return <FeatureList blok={blok} />;
     }
   })
 }

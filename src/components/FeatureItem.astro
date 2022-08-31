@@ -1,0 +1,16 @@
+---
+const { feature } = Astro.props;
+---
+
+<div class="col-sm-6 col-md-4 features-section-feature">
+  <img
+    src={feature.ImgUrl}
+    loading="lazy"
+    class="icn-row-3"
+    width="50"
+    height="50"
+    alt="icon"
+  /><br />
+  <h3 class="lg">{feature.Title}</h3>
+  <p>{feature.Description}</p>
+</div>

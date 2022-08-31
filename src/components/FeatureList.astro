@@ -1,0 +1,24 @@
+---
+import FeatureItem from "./FeatureItem.astro";
+
+const { blok } = Astro.props;
+---
+
+<section class="features-section">
+  <h2 class="xl text-center">{blok.Title}</h2>
+  <p class="features-section-subtitle">
+    {blok.Description}
+  </p>
+  <div class="container text-center text-md-left">
+    <div class="row">
+      {
+        blok.Feature.map((feature) => {
+          switch (feature.component) {
+            case "FeatureItem":
+              return <FeatureItem feature={feature} />;
+          }
+        })
+      }
+    </div>
+  </div>
+</section>

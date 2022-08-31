@@ -26,8 +26,9 @@ export async function getLinks() {
   return links;
 }
 
-export async function getStory(slug) {
-  const { data } = await storyblokApi.get(`cdn/stories/${slug}`, {
+export async function getStory(slug, language) {
+
+  const { data } = await storyblokApi.get(`cdn/stories/${slug}${language ? "?language=" + language : ""}`, {
     version: "draft",
   });
 
